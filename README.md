@@ -32,7 +32,7 @@ The **Audit Logs Microservice** is responsible for capturing, storing, and query
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-repo/audit-logs-ms.git
+   git clone https://github.com/BozinB/audit-logs-ms.git
    cd audit-logs-ms
    ```
 2. Install dependencies:
@@ -56,7 +56,6 @@ DATABASE_URI=mongodb://localhost:27017/audit-logs
 # Security
 API_KEY=your-api-key
 ```
-
 
 ## Running the Microservice
 
@@ -92,7 +91,6 @@ pm2 start dist/app.js --name audit-ms --env production
 * `clientId`, `userId`, `recordId`, `domain`, `operation`, `scope`, `startDate`, `endDate`: (Optional) Various filters
 * **Response** :
 
-
 ```json
 {
 "result": [
@@ -114,7 +112,6 @@ pm2 start dist/app.js --name audit-ms --env production
 }
 ```
 
-
 ### 2. **Create Audit Log**
 
 * **Endpoint** : `/api/audits`
@@ -122,7 +119,6 @@ pm2 start dist/app.js --name audit-ms --env production
 * **Headers** :
 * `x-api-key`: (Required) API key for authentication
 * **Body** :
-
 
 ```json
 {
@@ -135,7 +131,6 @@ pm2 start dist/app.js --name audit-ms --env production
 "date": "2024-10-24T22:47:28.507Z"
 }
 ```
-
 
 * **Response** : `201 Created`
 
